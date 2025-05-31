@@ -1,0 +1,24 @@
+# Core AI + agent infrastructure
+beeai-framework>=0.5.0
+ibm-watsonx-ai>=1.1.0
+
+# Config and validation
+pydantic>=2.0.0
+
+# Code parsing and static validation
+astroid>=3.0.0
+
+# Testing & code collection
+pytest>=7.0.0
+
+# Shell-safe directory scan (used by file_scanner)
+textwrap3>=0.9.2
+
+# Optional tools for enhanced linting or diffing (used in agents)
+diff-match-patch>=20200713
+
+# Required for Python 3.10+ typing support in older packages
+typing_extensions>=4.5.0
+
+# Colorized terminal diffs (optional)
+rich>=13.0.0

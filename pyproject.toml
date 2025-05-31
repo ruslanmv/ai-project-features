@@ -1,0 +1,40 @@
+# pyproject.toml
+# ────────────────────────────────────────────────────────────────────────────
+# Project metadata for ai-project-features
+
+[project]
+name = "ai-project-features"
+version = "0.1.0"
+description = "A multi-agent refactor assistant powered by BeeAI and IBM Watsonx.ai"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+keywords = ["ai", "refactor", "beeai", "watsonx", "multi-agent"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "beeai-framework>=0.5.0",
+  "ibm-watsonx-ai>=1.1.0",
+  "pydantic>=2.0.0",
+  "astroid>=3.0.0",
+  "pytest>=7.0.0",
+  "textwrap3>=0.9.2",
+  "diff-match-patch>=20200713",
+  "typing_extensions>=4.5.0",
+  "rich>=13.0.0",
+  "flask>=2.0.0",
+  "flask-cors>=3.0.10"
+]
+
+[project.scripts]
+ai-features = "src.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

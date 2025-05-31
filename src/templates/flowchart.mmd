@@ -1,0 +1,23 @@
+```mermaid
+flowchart TD
+    classDef phase fill:#f5f5f5,stroke:#555,stroke-width:1;
+    classDef io fill:#d9e8ff,stroke:#1e56d6,stroke-width:1;
+
+    Z[file_search.tree zip<br>det-erministic tool call]:::phase
+    LST[Directory tree &<br>file previews<br>tokens]:::io
+
+    P0[Attach tree + prompt<br>to context]:::phase
+    P1[Constraint / intent<br>extraction]:::phase
+    P2[Architecture recall<br>token-level lookup]:::phase
+    P3[Task decomposition<br>derive numbered steps]:::phase
+    P4[Feature instantiation<br>select concrete agent]:::phase
+    P5[Code & diff<br>snippet generation]:::phase
+    D1{Inline<br>self-check<br>identifier &<br>path coherence}:::phase
+    P6[Recap / re-enumeration<br>validates edits verbally]:::phase
+    OUT[Answer tokens<br>sent to user]:::io
+
+    Z --> LST --> P0
+    P0 --> P1 --> P2 --> P3 --> P4 --> P5 --> D1
+    D1 -- OK --> P6 --> OUT
+    D1 -- needs-fix --> P5
+```
