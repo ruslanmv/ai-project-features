@@ -107,8 +107,8 @@ Aurora uses **[uv](https://github.com/astral-sh/uv)** for lightning-fast depende
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Clone the repository
-git clone https://github.com/ruslanmv/aurora-refactor.git
-cd aurora-refactor
+git clone https://github.com/ruslanmv/ai-project-features.git
+cd ai-project-features
 
 # Install Aurora
 make install
